@@ -1,0 +1,23 @@
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: $base-border-radius / 4;
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    max-width: 400px;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
