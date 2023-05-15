@@ -62,4 +62,42 @@ $val in $colors {
             background-color: lighten($val, 10);
         }
     }
+
+    @for $i from 1 through 9 {
+        .btn-#{$key}-light-#{$i} {
+            color: mix(white, $val, calc($i * 10%));
+        }
+
+        .btn-hover-#{$key}-light-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(white, $val, calc($i * 10%));
+            }
+        }
+
+        .btn-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, calc($i * 10%));
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .btn-#{$key}-dark-#{$i} {
+            color: mix(black, $val, calc($i * 10%));
+        }
+
+        .btn-hover-#{$key}-dark-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(black, $val, calc($i * 10%));
+            }
+        }
+
+        .btn-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, calc($i * 10%));
+        }
+    }
 }

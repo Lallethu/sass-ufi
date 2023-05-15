@@ -8,7 +8,7 @@
 
 .navbar {
     @extend %flex-layout;
-    padding: $base-padding $base-padding * 2;
+    padding: $base-padding calc($base-padding * 2);
     box-shadow: $base-box-shadow;
 
     .site-title {
@@ -33,7 +33,39 @@ $val in $colors {
 
     @for $i from 1 through 9 {
         .navbar-#{$key}-light-#{$i} {
-            background-color: mix(white, $val, $i * 10);
+            color: mix(white, $val, calc($i * 10%));
+        }
+
+        .navbar-hover-#{$key}-light-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(white, $val, calc($i * 10%));
+            }
+        }
+
+        .navbar-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, calc($i * 10%));
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .navbar-#{$key}-dark-#{$i} {
+            color: mix(black, $val, calc($i * 10%));
+        }
+
+        .navbar-hover-#{$key}-dark-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(black, $val, calc($i * 10%));
+            }
+        }
+
+        .navbar-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, calc($i * 10%));
         }
     }
 }
