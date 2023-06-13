@@ -1,0 +1,8 @@
+@each $key,
+$val in $colors {
+    .block-#{$key} {
+        background-color: lighten($val, 10);
+        min-width: 100%;        
+        min-height: 100%;        
+    }
+}
