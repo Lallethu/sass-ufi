@@ -197,8 +197,8 @@ $utils: (
 
 @each $prop,
 $map in $utils {
-    $prefix: map-get($map, "prefix");
-    $values: map-get($map, "values");
+    $prefix: map.get($map, "prefix");
+    $values: map.get($map, "values");
 
     @each $k,
     $v in $values {

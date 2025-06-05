@@ -21,11 +21,11 @@ $val in $colors {
 
         &:hover {
             transition: all .275s ease-in-out;
-            background-color: lighten($val, 5);
+            background-color: color.adjust($val, 5);
         }
 
         &:active {
-            background-color: lighten($val, 10);
+            background-color: color.adjust($val, 10);
         }
     }
 
@@ -42,7 +42,7 @@ $val in $colors {
         border: $base-border-thickness solid $val;
 
         &:active {
-            background-color: lighten($val, 10);
+            background-color: color.adjust($val, 10);
         }
 
     }
@@ -59,7 +59,7 @@ $val in $colors {
         }
 
         &:active {
-            background-color: lighten($val, 10);
+            background-color: color.adjust($val, 10);
         }
     }
 

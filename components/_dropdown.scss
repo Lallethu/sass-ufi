@@ -16,7 +16,7 @@
         text-decoration: none;
         margin-bottom: $base-padding;
         &:hover {
-            background-color: lighten($bg, 10);
+            background-color: color.adjust($bg, 10);
         }
         &:last-child {
             margin: 0;
@@ -62,7 +62,7 @@ $val in $colors {
         }
 
         &>.btn:hover {
-            background-color: lighten($val, 12);
+            background-color: color.adjust($val, 12);
         }
     }
 }

@@ -6,8 +6,8 @@
 }
 
 .img-responcive {
-    max-width: map-get($images-responsible, "w");
-    height: map-get($images-responsible, "h");
+    max-width: map.get($images-responsible, "w");
+    height: map.get($images-responsible, "h");
 }
 
 .img-blur {
